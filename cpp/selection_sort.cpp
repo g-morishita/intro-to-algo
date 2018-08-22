@@ -5,16 +5,15 @@ typedef std::vector<int> int_vec;
 int_vec selection_sort(int_vec a) {
     int len = a.size();
     for ( int i = 0; i < len; i++ ) {
-        int min = a[i];
         int i_min = i;
         for ( int j = i + 1; j < len; j++ ) {
-            if ( min > a[j] ) {
-                min = a[j];
+            if ( a[i_min] > a[j] ) {
                 i_min = j;
             }
         }
-        a[i_min] = a[i];
-        a[i] = min;
+        int tmp = a[i];
+        a[i] = a[i_min];
+        a[i_min] = tmp;
     }
     return a;
 }
