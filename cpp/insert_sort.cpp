@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cassert>
 #include <array>
 
 void insert_sort(int a[], int len, bool reverse = false) {
